@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_sound"
+            android:icon="@drawable/my_sound_icon"
+            android:title="@string/activity_my_sounds" />
+        <item
+            android:id="@+id/nav_my_category"
+            android:icon="@drawable/ic_my_library_books_white_24dp"
+            android:title="@string/activity_my_category" />
+        <item
+            android:id="@+id/nav_fav_sound"
+            android:icon="@drawable/heart_library_1"
+            android:title="@string/activity_fav_sounds" />
+        <item
+            android:id="@+id/nav_fav_category"
+            android:icon="@drawable/heart_stack_1"
+            android:title="@string/activity_fav_category" />
+        <item
+            android:id="@+id/nav_liked_sound"
+            android:icon="@drawable/liked_icon"
+            android:title="@string/activity_Like_sounds" />
+        <!--<item-->
+            <!--android:id="@+id/nav_history"-->
+            <!--android:icon="@drawable/ic_history_grey600_36dp"-->
+            <!--android:title="History" />-->
+    </group>
+
+  </menu>

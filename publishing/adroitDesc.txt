@@ -1,0 +1,6 @@
+pwd - adroit
+alias - adroit
+
+Certificate fingerprints:
+MD5 : 2B:6D:55:5B:C3:D0:27:79:B1:07:1E:7D:F3:AE:9B:66
+SHA1: E0:DA:ED:27:E7:D7:F3:AC:D4:D2:81:7F:64:26:D3:1F:55:86:D1:9A

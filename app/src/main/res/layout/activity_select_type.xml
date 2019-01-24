@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context="dummysound.dheeraj.com.dummysound.SelectType">
+
+    <com.startup.soundstack.customclass.CustomText
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:customFont="ProximaNovaSoftMedium.ttf"
+        android:textColor="@android:color/white"
+        android:text="@string/Add_Sound"
+        android:padding="5dp"
+
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/record_audio"
+            >
+
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/record_normal_196"
+                android:tint="#0078d7"
+                />
+            <com.startup.soundstack.customclass.CustomText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Record_Audio"
+                android:layout_alignBottom="@+id/mic"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="#0078d7"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/import_audio">
+
+            <ImageView
+                android:id="@+id/import_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="20dp"
+                android:src="@drawable/import_icon"
+                android:tint="#00cc6a"
+                />
+            <com.startup.soundstack.customclass.CustomText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Import_Audio"
+                android:layout_alignBottom="@+id/import_sound"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="#00cc6a"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

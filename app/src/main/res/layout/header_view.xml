@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/headerView"
+    android:background="@android:color/transparent"
+    >
+
+    <ImageView
+        android:id="@+id/coverPic"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cover"
+        />
+
+    <ProgressBar
+        android:id="@+id/coverPB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:gravity="left">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:clickable="true"
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+        />
+
+    <TextView
+        android:id="@+id/userName"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_primary"
+        android:text="Guest"
+        android:layout_gravity="center"
+        android:background="@drawable/ripple"
+        />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/profilePB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

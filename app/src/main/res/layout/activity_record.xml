@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/parentRL">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/messagge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="sjdkahkjashkjas"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/micImgBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_normal" />
+
+        <ImageView
+            android:id="@+id/micImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_normal" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainLayout"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/num_Sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/num"
+        android:layout_alignBaseline="@id/num"
+        android:layout_marginLeft="5dp"
+        android:text="secs"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_below="@id/num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/messagge"
+        android:layout_alignRight="@id/messagge"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageButton
+            android:id="@+id/resetButton"
+            android:onClick="recordinAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_loop_white_48dp"
+            android:layout_alignParentLeft="true"
+            android:tint="@color/color_accent"
+            android:background="@drawable/ripple"
+            />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:onClick="recordinAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop_white_48dp"
+            android:tint="@color/color_accent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ripple"
+            />
+
+        <ImageButton
+            android:onClick="recordinAction"
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause_white_48dp"
+            android:layout_alignParentRight="true"
+            android:tint="@color/color_accent"
+            android:background="@drawable/ripple"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Max Allowed : 90 Sec"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        />
+
+
+</RelativeLayout>

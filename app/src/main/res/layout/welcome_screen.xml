@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+    xmlns:facebook="http://schemas.android.com/tools">
+
+    <com.startup.soundstack.customclass.CustomText
+        android:id="@+id/Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        app:customFont="ProximaNovaSoftMedium.ttf"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/color_accent"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+		
+    <com.startup.soundstack.customclass.CustomText
+        android:id="@+id/welcome_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your username and Image"
+        app:customFont="ProximaNovaSoftMedium.ttf"
+        android:textStyle="bold"
+        android:textColor="#303F9F"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/Welcome"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/imageParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Welcome"
+        >
+        <com.facebook.login.widget.ProfilePictureView
+            android:id="@+id/user_imageF"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            facebook:preset_size="normal"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:onClick="onClick"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/user_nameP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageParent"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ashwani Bhatt"
+            android:hint="User Name"
+            android:ems="10"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:inputType="text"
+            android:maxLength="20"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.startup.soundstack.customclass.CustomText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_warning"
+        android:text="*UserName cannot be modified later on"
+        android:textSize="13dp"
+        android:layout_below="@+id/user_nameP"
+        android:layout_alignLeft="@+id/Welcome"
+        android:layout_alignStart="@+id/Welcome" />
+
+    <ProgressBar
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/user_nameP"
+        android:layout_toRightOf="@id/user_nameP"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/user_nameP"
+        android:layout_toRightOf="@id/user_nameP"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/checkmark"
+        android:visibility="gone"
+        android:src="@drawable/ic_check_box_black_24dp"
+        android:tint="#66CD00"/>
+
+    <Button
+        android:id="@+id/welcome_submit"
+        android:text="Done"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_nameP"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/user_nameP"
+        android:layout_alignRight="@id/user_nameP"
+        android:layout_marginTop="40dp"
+        android:onClick="onClick"
+        />
+
+</RelativeLayout>

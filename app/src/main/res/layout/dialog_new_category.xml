@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autolabel="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_new_category"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:background="@color/color_primary"
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:textColor="@android:color/white"
+            android:padding="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_catname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/category_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textCapSentences"
+                android:maxLength="40"
+                android:textColorHint="@color/color_primary_dark"
+                android:textColor="@color/color_primary"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.dpizarro.autolabel.library.AutoLabelUI
+            android:id="@+id/cat_label_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInput_catname"
+            autolabel:max_labels="3"
+            autolabel:show_cross="true"
+            autolabel:text_color="@android:color/white"
+            autolabel:text_size="@dimen/label_title_size"
+            autolabel:icon_cross="@drawable/cross"
+            autolabel:background_color="@color/color_primary"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_cat_tag1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/cat_label_view"
+            android:layout_marginTop="15dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/cat_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tags"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:dropDownHeight="200dp"
+                android:imeOptions="actionDone"
+                android:dropDownAnchor="@id/Title"
+                android:textColorHint="@color/color_primary_dark"
+                android:textColor="@color/color_primary"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/label_icon_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:layout_below="@id/textInput_cat_tag1"
+            android:layout_alignLeft="@id/textInput_cat_tag1"
+            android:textColor="@color/color_primary_dark"
+            android:layout_marginTop="20dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/iconSelector"
+            android:layout_below="@id/label_icon_selector"
+            android:layout_marginTop="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/label_cate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Access"
+            android:textSize="20sp"
+            android:textColor="@color/color_primary_dark"
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:layout_below="@id/iconSelector"
+            android:layout_marginTop="20dp"
+            />
+
+        <Spinner
+            android:id="@+id/access_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_cate"
+            android:layout_toRightOf="@id/label_cate"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:entries="@array/access_value"
+            />
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/access_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/creating_stack_limit_reached"
+            android:textSize="13sp"
+            android:textColor="@color/color_accent"
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:layout_below="@id/access_spinner"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            />
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/limit_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/creating_stack_limit_warning"
+            android:textSize="11sp"
+            android:textColor="@color/color_accent"
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:layout_below="@id/access_warning"
+            android:layout_marginTop="20dp"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

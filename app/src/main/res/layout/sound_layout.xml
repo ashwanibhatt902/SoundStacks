@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_default"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/card_view"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--card_view:cardCornerRadius="2dp"-->
+        <!-->-->
+    <RelativeLayout
+        android:id="@+id/admain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/adIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="14dp"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="@color/color_primary"
+            android:src="#ffffff"
+            />
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/adIcon"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ctaBttn"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/adIcon"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:customFont="ProximaNovaSoftMedium.ttf" />
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/star"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/ctaBttn"
+            android:layout_alignLeft="@id/appName"
+            android:layout_below="@id/appName"
+            android:padding="5dp"
+            android:textColor="#bcbcbc"
+            android:textSize="11sp"
+            app:customFont="ProximaNovaSoftMedium.ttf"/>
+
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/ctaBttn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginRight="12dp"
+            android:textColor="#000000"
+            android:textSize="9sp"
+            app:customFont="ProximaNovaSoftMedium.ttf" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cecece" />
+    </RelativeLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/playParent"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/iconImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:tint="@color/color_primary"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@id/prgrss"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_cancel_white_36dp"
+                            android:tint="@color/color_primary"/>
+                        <ProgressBar
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/soundNameLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/share"
+                    android:layout_toRightOf="@+id/playParent"
+                    android:orientation="vertical">
+
+                    <com.startup.soundstack.customclass.CustomText
+                        android:id="@+id/soundname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="CategoryName"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:customFont="ProximaNovaSoftMedium.ttf"
+                        />
+
+                </LinearLayout>
+
+                <com.startup.soundstack.customclass.CustomText
+                    android:id="@+id/by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/share"
+                    android:layout_below="@id/soundNameLL"
+                    app:customFont="ProximaNovaSoftMedium.ttf"
+                    android:textColor="#bcbcbc"
+                    android:textSize="11sp"
+                    android:text="By:Team">
+                </com.startup.soundstack.customclass.CustomText>
+
+                <LinearLayout
+                    android:id="@+id/llExpandArea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/by"
+                    android:layout_alignLeft="@id/soundNameLL"
+                    android:textColor="#bcbcbc"
+                    android:gravity="left|bottom"
+                    android:layout_toLeftOf="@id/share"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+
+                    <!--<com.startup.soundstack.customclass.CustomText-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:text="Report"-->
+                        <!--android:textColor="#bcbcbc"-->
+                        <!--app:customFont="ProximaNovaSoftMedium.ttf"-->
+                        <!--android:background="@drawable/ripple_default"-->
+                        <!--android:id="@+id/report"/>-->
+
+                    <!--<com.startup.soundstack.customclass.CustomText-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--app:customFont="ProximaNovaSoftMedium.ttf"-->
+                        <!--android:textColor="#bcbcbc"-->
+                        <!--android:text="Add"/>-->
+
+                    <ImageView
+                        android:id="@+id/favIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/ic_favorite_outline_black_18dp"
+                        android:paddingRight="16dp"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffab40"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/likeParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:paddingRight="8dp"
+                        android:paddingLeft="8dp"
+                        >
+
+                    <ImageView
+                        android:id="@+id/likeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/ic_thumb_up_grey600_18dp"/>
+
+                        <com.startup.soundstack.customclass.CustomText
+                            android:id="@+id/likeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:customFont="ProximaNovaSoftMedium.ttf"
+                            android:textColor="#bcbcbc"
+                            android:text="5"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#ffab40"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/dislikeParent"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:paddingRight="8dp"
+                        android:paddingLeft="8dp">
+
+                    <ImageView
+                        android:id="@+id/dislikeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/ic_thumb_down_grey600_18dp"/>
+
+                        <com.startup.soundstack.customclass.CustomText
+                            android:id="@+id/dislikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:customFont="ProximaNovaSoftMedium.ttf"
+                            android:textColor="#bcbcbcbc"
+
+                            android:text="0"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/share">
+                </ImageView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cecece"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="40dp"/>
+            <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>

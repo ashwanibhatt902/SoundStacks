@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="access_value">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
+    <string-array name="report_reason">
+        <item>Religious </item>
+        <item>Sexuality</item>
+        <item>Intellectual Property</item>
+        <item>Spam</item>
+        <item>Others(Specify reason)</item>
+     </string-array>
+</resources>

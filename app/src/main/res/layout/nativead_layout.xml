@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/ripple_default"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iconImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="@color/color_primary"
+            android:padding="5dp"
+            android:src="#ffffff"
+            android:textStyle="bold"
+
+            />
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/catName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iconImage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/sponsored"
+            android:layout_toRightOf="@+id/iconImage"
+            android:padding="5dp"
+            android:text="CategoryName"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:customFont="ProximaNovaSoftMedium.ttf" />
+
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/sponsored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iconImage"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/faviconparent"
+            android:padding="5dp"
+            android:text="Sponsored"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:customFont="ProximaNovaSoftMedium.ttf" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style = "?android:attr/ratingBarStyleSmall"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/catName"
+            android:layout_below="@id/catName"
+            android:padding="5dp"
+            android:max="5"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

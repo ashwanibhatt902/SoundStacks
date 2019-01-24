@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon"/>
+
+
+        <com.startup.soundstack.customclass.CustomText
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Version_SoundStacks"
+            app:customFont="ProximaNovaSoftMedium.ttf"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <com.startup.soundstack.customclass.CustomText
+        android:id="@+id/license"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/View_Licenses"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:textColor="@color/color_accent"
+        android:background="@drawable/ripple_default"/>
+
+</LinearLayout>

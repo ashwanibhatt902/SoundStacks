@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.5.0"
+  },
+  "applications": {
+    "Sound Stack - Listen \u0026 Share": {
+      "applicationId": "UnUpW6Hpn6z5iB1riCaPj54sbMlGToLpkyQoLyES",
+      "masterKey": "1GW9Wb0Vaz48sK8WtxlY1VkNt9oomZFhVHAQfWLm"
+    },
+    "_default": {
+      "link": "Sound Stack - Listen \u0026 Share"
+    }
+  }
+}

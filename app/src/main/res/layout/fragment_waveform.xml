@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:autolabel="http://schemas.android.com/tools"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.startup.soundstack.customclass.CustomText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="Select audio range and continue..."
+                android:textSize="18sp"
+                app:customFont="ProximaNovaSoftMedium.ttf"
+                android:id="@+id/msg_title"/>
+
+            <RelativeLayout
+                android:id="@+id/waveform_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+
+                android:layout_below="@id/msg_title"
+                >
+
+                <!--<ImageView-->
+                <!--android:id="@+id/bkgnd"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:background="@android:color/darker_gray"-->
+                <!--android:scaleType="centerCrop" />-->
+
+                <com.startup.soundstack.view.WaveformView
+                    android:id="@+id/waveform"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <com.startup.soundstack.view.MarkerView
+                    android:id="@+id/startmarker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/start_marker"
+                    android:nextFocusDown="@+id/endmarker"
+                    android:src="@drawable/marker_left" />
+
+                <com.startup.soundstack.view.MarkerView
+                    android:id="@+id/endmarker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/end_marker"
+                    android:nextFocusDown="@+id/info"
+                    android:nextFocusUp="@+id/startmarker"
+                    android:src="@drawable/marker_right" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_below="@+id/waveform_layout"
+                style="@android:style/MediaButton"
+                android:layout_width="71dip"
+                android:layout_height="52dip"
+                android:layout_marginTop="6dip"
+                android:src="@drawable/play_circle"
+                android:tint="@color/color_primary"
+                android:layout_centerHorizontal="true"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/play"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInput_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <EditText
+                        android:id="@+id/soundName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="textCapSentences"
+                        android:maxLength="40" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <com.dpizarro.autolabel.library.AutoLabelUI
+                    android:id="@+id/label_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInput_name"
+                    autolabel:max_labels="3"
+                    autolabel:show_cross="true"
+                    autolabel:text_color="@android:color/white"
+                    autolabel:text_size="@dimen/label_title_size"
+                    autolabel:icon_cross="@drawable/cross"
+                    autolabel:background_color="@color/color_primary"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInput_tag1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@id/label_view"
+                    android:layout_marginTop="15dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tag1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tags"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences"
+                        android:maxLength="20" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <com.startup.soundstack.customclass.CustomText
+                    android:id="@+id/label_cate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stack"
+                    android:textSize="20sp"
+                    android:textColor="@color/color_primary"
+                    app:customFont="ProximaNovaSoftMedium.ttf"
+                    android:layout_below="@id/textInput_tag1"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <com.startup.soundstack.customclass.CustomSpinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/label_cate"
+                    android:layout_toRightOf="@id/label_cate"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="55dp"
+
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/stat_sys_upload"
+        android:layout_gravity="end|bottom"
+        android:elevation="10dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

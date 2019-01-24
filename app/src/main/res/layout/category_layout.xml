@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/admain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/ripple_default"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/adIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/color_primary"
+                android:padding="5dp"
+                android:src="#ffffff"
+                android:textStyle="bold"
+
+                />
+
+            <com.startup.soundstack.customclass.CustomText
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/adIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toLeftOf="@+id/ctaBttn"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_toRightOf="@+id/adIcon"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:customFont="ProximaNovaSoftMedium.ttf" />
+
+            <com.startup.soundstack.customclass.CustomText
+                android:id="@+id/star"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/ctaBttn"
+                android:layout_alignLeft="@id/appName"
+                android:layout_below="@id/appName"
+                android:padding="5dp"
+                android:textColor="#bcbcbc"
+                android:textSize="11sp"
+                app:customFont="ProximaNovaSoftMedium.ttf"/>
+
+
+            <com.startup.soundstack.customclass.CustomText
+                android:id="@+id/ctaBttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="9sp"
+                app:customFont="ProximaNovaSoftMedium.ttf" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_below="@+id/admain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/ripple_default"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iconImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/color_primary"
+                android:padding="5dp"
+                android:src="#ffffff"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:id="@+id/category_type"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@id/iconImage"
+                android:layout_alignRight="@id/iconImage"
+
+                android:src="@drawable/ic_lock_outline_white_18dp"
+                android:tint="@color/color_accent"
+                android:visibility="gone" />
+
+            <com.startup.soundstack.customclass.CustomText
+                android:id="@+id/catName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconImage"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toLeftOf="@+id/faviconparent"
+                android:layout_toRightOf="@+id/iconImage"
+                android:padding="5dp"
+                android:text="CategoryName"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:customFont="ProximaNovaSoftMedium.ttf" />
+
+            <com.startup.soundstack.customclass.CustomText
+                android:id="@+id/by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/catName"
+                android:layout_below="@id/catName"
+                android:padding="5dp"
+                android:text="By:Team"
+                android:textColor="#bcbcbc"
+                android:textSize="11sp"
+                app:customFont="ProximaNovaSoftMedium.ttf">
+
+            </com.startup.soundstack.customclass.CustomText>
+
+            <LinearLayout
+
+                android:id="@+id/faviconparentBG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/iconImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/faviconBG"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/heart_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/faviconparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/iconImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/favicon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:focusable="true"
+                    android:src="@drawable/heart_light"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

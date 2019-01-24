@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.startup.soundstack.activities.SoundActivity">
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_playlist_add_white_24dp"
+        android:orderInCategory="100"
+        android:title="add"
+        app:showAsAction="always" />
+</menu>
