@@ -17,6 +17,7 @@ repositories {
 //apply plugin: 'com.google.gms.google-services'
 
 android {
+//need to update all of these
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
 
